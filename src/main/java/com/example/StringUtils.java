@@ -5,6 +5,7 @@ public class StringUtils {
     // BUG: case/spacing not normalized
     public boolean isPalindrome(String s) {
         if (s == null) return false;
+        s = s.toLowerCase();
         int i = 0, j = s.length() - 1;
         while (i < j) {
             if (s.charAt(i) != s.charAt(j)) return false;
@@ -15,10 +16,11 @@ public class StringUtils {
 
     // BUG: counts only lowercase vowels
     public int countVowels(String s) {
+        s = s.toLowerCase();
         if (s == null) return 0;
         int c = 0;
         for (char ch : s.toCharArray()) {
-            if ("aeiou".indexOf(ch) >= 0) c++;
+            if ("aeiouy".indexOf(ch) >= 0) c++;
         }
         return c;
     }

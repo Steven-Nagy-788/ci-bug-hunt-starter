@@ -21,7 +21,7 @@ public class StringUtilsTest {
     @Test
     void countVowels_uppercaseShouldCountToo() {
         StringUtils u = new StringUtils();
-        assertEquals(4, u.countVowels("EducAtIon")); // will FAIL (uppercase not counted)
+        assertEquals(5, u.countVowels("EducAtIon")); // will FAIL (uppercase not counted)
     }
 
     @Test
