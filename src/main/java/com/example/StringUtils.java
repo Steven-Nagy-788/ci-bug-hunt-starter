@@ -5,7 +5,7 @@ public class StringUtils {
     // BUG: case/spacing not normalized
     public boolean isPalindrome(String s) {
         if (s == null) return false;
-        s = s.toLowerCase();
+        s = s.toLowerCase().replaceAll("\\s+", "");
         int i = 0, j = s.length() - 1;
         while (i < j) {
             if (s.charAt(i) != s.charAt(j)) return false;
